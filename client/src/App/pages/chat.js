@@ -10,9 +10,9 @@ import InputLabel from '@material-ui/core/InputLabel';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
  
 
-import Message from './message';
+import Message from '../components/Message';
  
-import UserOnline from './UserOnline';
+import UserOnline from '../components/UserOnline';
  
 const styles = theme => ({
     root: {
@@ -71,7 +71,7 @@ class Chat extends Component{
             const message =  <Message    message={data.message.text} 
                                         aId={data.message.avatarId} 
                                         key={this.state.arrayMessages.length+1}
-                                        itsMe={this.state.username==data.message.username}
+                                        itsMe={this.state.username===data.message.username}
                                         username={data.message.username} >
                             </Message>;
             const items = [...this.state.arrayMessages, message];
@@ -82,7 +82,7 @@ class Chat extends Component{
                                         message={data.text} 
                                         aId={data.avatarId} 
                                         key={this.state.arrayMessages.length+1}
-                                        itsMe={this.state.username==data.username}
+                                        itsMe={this.state.username===data.username}
                                         username={data.username} >
                             </UserOnline>;     
             const items = [...this.state.arrayMessages, message];
@@ -141,7 +141,7 @@ class Chat extends Component{
                                </FormControl>
                            </Grid>
                            <Grid item>
-                               <Button style={{height:"100%"}} variant="contained" color="primary" disabled={this.state.currentMsg.trim()==""} onClick={this.handleClick} >
+                               <Button style={{height:"100%"}} variant="contained" color="primary" disabled={this.state.currentMsg.trim()===""} onClick={this.handleClick} >
                                Send
                                </Button>
                            </Grid>
@@ -167,5 +167,3 @@ Chat.propTypes = {
 };
 
 export default withStyles(styles)(Chat);
-
- 

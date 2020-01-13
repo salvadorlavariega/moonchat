@@ -1,4 +1,4 @@
-import React, { Component, useState} from 'react';
+import React  from 'react';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -38,7 +38,7 @@ export default function UserOnline(props) {
                   <Paper className={classes.paper} elevation={0}>
                     <Grid container wrap="nowrap" spacing={2}>
                         <Grid item>
-                            <Avatar><img src={avatares[props.aId]} style={{width:"100%"}}></img></Avatar>
+                            <Avatar><img alt="avatar" src={avatares[props.aId]} style={{width:"100%"}}></img></Avatar>
                         </Grid>
                         <Grid item xs zeroMinWidth>
                             

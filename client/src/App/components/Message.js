@@ -1,4 +1,4 @@
-import React, { Component, useState} from 'react';
+import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -37,10 +37,10 @@ export default function Message(props) {
                 <Paper className={classes.paper}>
                     <Grid container wrap="nowrap" spacing={2}>
                         <Grid item xs zeroMinWidth>
-                            <Typography noWrap><p>{props.message}</p></Typography>
+                            <Typography component="span" noWrap><p>{props.message}</p></Typography>
                         </Grid>
                         <Grid item>
-                            <Avatar><img src={avatares[props.aId]} style={{width:"100%"}}></img></Avatar>
+                            <Avatar><img alt="avatar" src={avatares[props.aId]} style={{width:"100%"}}></img></Avatar>
                             <Typography component="div">
                                 <Box fontWeight="fontWeightLight" m={1} fontSize={10} >
                                 <span>{props.username}</span>
@@ -58,7 +58,7 @@ export default function Message(props) {
                 <Paper className={classes.paper}>
                     <Grid container wrap="nowrap" spacing={2}>
                         <Grid item>
-                            <Avatar><img src={avatares[props.aId]} style={{width:"100%"}}></img></Avatar>
+                            <Avatar><img alt="avatar" src={avatares[props.aId]} style={{width:"100%"}}></img></Avatar>
                             <Typography component="div">
                                 <Box fontWeight="fontWeightLight" m={1} fontSize={10} >
                                 <span>{props.username}</span>
@@ -66,7 +66,7 @@ export default function Message(props) {
                             </Typography>
                         </Grid>
                         <Grid item xs zeroMinWidth>
-                            <Typography noWrap>{props.message}</Typography>
+                            <Typography component="span" noWrap>{props.message}</Typography>
                         </Grid>
                     </Grid>
                 </Paper>  

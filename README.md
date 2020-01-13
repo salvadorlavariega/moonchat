@@ -5,6 +5,10 @@
   - Express
   - Socket io
   - React
+  - Material-UI
+# Donut Chart
+I based on https://codepen.io/zeroskillz/pen/mPmENy For the chart 
+In the same project you can see the second challenge: 
 ### Please follow the next steps for the correct installation for you can see the Chat running on you computer
 
 Moonchat requires [Node.js](https://nodejs.org/) v8.11.2+ to run.
